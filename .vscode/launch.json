@@ -23,7 +23,6 @@
                 "${workspaceFolder}/out/**/*.js"
             ],
             "preLaunchTask": "npm: watch",
-            "timeout": 30000
         },
         {
             "name": "Extension Tests",
@@ -38,7 +37,6 @@
                 "${workspaceFolder}/out/test/**/*.js"
             ],
             "preLaunchTask": "npm: watch",
-            "timeout": 30000
         }
     ]
 }
