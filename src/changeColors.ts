@@ -67,6 +67,6 @@ export default async (hexColor?: string) => {
   settings.update(
     COLOR_CUSTOMIZATIONS_SETTING,
     hasItems ? colorCustomization : undefined,
-    vscode.ConfigurationTarget.Workspace // Workspace does not work for colorCustomizations with azure data studio 
+    vscode.ConfigurationTarget.Global // Workspace does not work for colorCustomizations with azure data studio 
   );
 };

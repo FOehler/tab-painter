@@ -3,6 +3,7 @@ import * as vscode from 'vscode';
 import changeColors from './changeColors';
 import getMapping from './getMapping';
 import * as azdata from 'azdata';
+import resetColors from './resetColors';
 
 const MAX_RETRIES = 3;
 const RETRY_DELAY_MS = 50;
@@ -45,7 +46,7 @@ export function activate(context: vscode.ExtensionContext) {
         if (!connection) {
             // If there is no connection, change the colors to default
             await Promise.all([
-                changeColors(undefined),
+                resetColors(),
             ]);
         }
         else {
