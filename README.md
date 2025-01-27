@@ -1,13 +1,46 @@
-# README
-## This is the README for your extension "tab-painter"
-You can author your README using Visual Studio Code.  Here are some useful editor keyboard shortcuts:
+# TabPainter for Azure Data Studio
 
-* Split the editor (`Cmd+\` on macOS or `Ctrl+\` on Windows and Linux)
-* Toggle preview (`Shift+CMD+V` on macOS or `Shift+Ctrl+V` on Windows and Linux)
-* Press `Ctrl+Space` (Windows, Linux) or `Cmd+Space` (macOS) to see a list of Markdown snippets
+Accidentally running a query on the wrong database server can have serious consequences. This extension provides an immediate visual indicator of which server you're connected to by coloring your editor interface. Never accidentally run a query on the wrong server again!
 
-### For more information
-* [Visual Studio Code's Markdown Support](http://code.visualstudio.com/docs/languages/markdown)
-* [Markdown Syntax Reference](https://help.github.com/articles/markdown-basics/)
+## Features
+- Automatically colors editor components based on the active database connection
+- Customizable color schemes for different server names with full regex support
+- Visual safeguard to easily distinguish between production and development environments
+- Helps prevent running queries on unintended servers
 
-**Enjoy!**
+## Extension Settings
+
+### Color Mapping Configuration
+
+The main configuration is done through `tabPainter.mapping`, which defines the color rules:
+
+```json
+{
+  "tabPainter.mapping": [
+    {
+      "regex": "production.*", // full regex support
+      "color": "#FF0000"  // Red for production
+    },
+    {
+      "regex": "localhost",
+      "color": "#00FF00"  // Green for localhost
+    }
+  ]
+}
+```
+
+### Other Settings
+
+| Setting | Description | Default | Type |
+|---------|-------------|---------|------|
+| `colorTabs.ignoreCase` | Ignore case when matching regex patterns | `true` | boolean |
+| `colorTabs.statusBarBackground` | Color the status bar background | `true` | boolean |
+| `colorTabs.tabBorder` | Color the tab borders | `true` | boolean |
+| `colorTabs.titleBackground` | Color the title background | `false` | boolean |
+| `colorTabs.activityBarBackground` | Color the activity bar background | `false` | boolean |
+| `colorTabs.titleLabel` | Show colored title label | `false` | boolean |
+| `colorTabs.tabBackground` | Color the tab background | `false` | boolean |
+
+## Changelog
+- [0.1.0]
+  - Initial release
