@@ -43,18 +43,21 @@ export function activate(context: vscode.ExtensionContext) {
 
         const connection = await getConnectionWithRetry();
         if (!connection) {
-            return;
-        }
-
-        const mapping = getMapping(connection.serverName);
-        try {
+            // If there is no connection, change the colors to default
             await Promise.all([
-                changeColors(mapping && mapping.color),
+                changeColors(undefined),
             ]);
-        } catch (error) {
-            console.log("ERROR", error);
         }
-
+        else {
+            const mapping = getMapping(connection.serverName);
+            try {
+                await Promise.all([
+                    changeColors(mapping && mapping.color),
+                ]);
+            } catch (error) {
+                console.log("ERROR", error);
+            }
+        }
     });
     context.subscriptions.push(disposable);
 }
