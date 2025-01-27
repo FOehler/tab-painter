@@ -2,7 +2,7 @@
   "name": "tab-painter",
   "displayName": "TabPainter",
   "description": "Extension that paints the tabs in user defined colors based on the current connection ",
-  "publisher": "oehler.dev",
+  "publisher": "oehlerdev",
   "version": "0.0.1",
   "engines": {
     "vscode": "^1.39.0",
