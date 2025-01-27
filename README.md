@@ -44,3 +44,6 @@ The main configuration is done through `tabPainter.mapping`, which defines the c
 ## Changelog
 - [0.1.0]
   - Initial release
+
+## Credits
+I took inspiration from the Visual Studio Code extension [ColorTabs](https://github.com/oreporan/color-tabs-vscode/tree/master) by [Ore Poran](https://github.com/oreporan).
