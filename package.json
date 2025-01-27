@@ -24,11 +24,11 @@
           "type": "array",
           "default": [
             {
-              "regex": ".*Prod.*",
+              "regex": "production",
               "color": "#FF0000"
             },
             {
-              "regex": ".*Test.*",
+              "regex": "localhost",
               "color": "#00FF00"
             }
           ],
