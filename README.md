@@ -18,16 +18,17 @@ The main configuration is done through `tabPainter.mapping`, which defines the c
 {
   "tabPainter.mapping": [
     {
-      "regex": "production.*", // full regex support
-      "color": "#FF0000"  // Red for production
+      "regex": "production.*", 
+      "color": "#FF0000"
     },
     {
       "regex": "localhost",
-      "color": "#00FF00"  // Green for localhost
+      "color": "#00FF00"
     }
   ]
 }
 ```
+The "regex" entry supports all Javascript regex expressions and matches on the server connected in the active tab. 
 
 ### Other Settings
 
