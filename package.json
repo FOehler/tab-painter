@@ -8,6 +8,10 @@
     "vscode": "^1.39.0",
     "azdata": "*"
   },
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/FOehler/tab-painter.git"
+	},
   "categories": [
     "Other"
   ],
