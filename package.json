@@ -81,7 +81,7 @@
     "compile": "tsc -p ./",
     "watch": "tsc -watch -p ./",
     "proposedapi": "node installTypings.js",
-    "package": "rm -f tab-painter-* && vsce package"
+    "package": "rm -f tab-painter-* && vsce package --allow-star-activation"
   },
   "devDependencies": {
     "@types/azdata": "*",
