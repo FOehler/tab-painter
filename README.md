@@ -1,3 +1,7 @@
+# Retirement of Azure Data Studio
+
+Azure Data Studio will be retired in February 2026. Therefore, **this extension will not be developed further**. Similar functionality for Visual Studio Code exists in extensions like: [ColorTabs](https://github.com/oreporan/color-tabs-vscode/tree/master). 
+
 # TabPainter for Azure Data Studio
 
 Accidentally running a query on the wrong database server can have serious consequences. This extension provides an immediate visual indicator of which server you're connected to by coloring your editor interface. Never accidentally run a query on the wrong server again!
